@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<!-- 문자 인코딩과 모바일 화면 폭 설정: 반응형의 출발점 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- 검색 결과 제목과 요약문으로 쓰이는 두 줄 -->
+<title>요금제 자주 묻는 질문 (가상 예시)</title>
+<meta name="description" content="가상의 통신 요금제 3종에 대한 자주 묻는 질문 5개. GEO 퍼블리싱 연습용 예시 페이지이며 실제 통신사 정보가 아닙니다.">
+<!-- 같은 내용이 여러 주소로 퍼지지 않게 대표 주소를 지정하는 자리  -->
+<link rel="canonical" href="https://dennisliu89-sys.github.io/faq.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+
+<!--
+  구조화 데이터 (JSON-LD)
+  - 화면에 보이는 질문과 답을 기계가 읽는 형식으로 한 번 더 적어 둔 요약표
+  - 규칙: 여기 적은 질문·답 문장은 화면 본문과 글자 하나까지 같아야 한다
+  - dateModified: 요금 정보처럼 자주 바뀌는 내용은 마지막 수정일을 함께 알린다
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "요금제 자주 묻는 질문 (가상 예시)",
+  "inLanguage": "ko",
+  "dateModified": "2026-10-25",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "기본 데이터를 다 쓰면 요금이 더 나오나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "추가 요금은 나오지 않고 속도만 제한됩니다. 기본 데이터를 모두 쓰면 라이트는 1Mbps, 스탠다드는 3Mbps, 프리미엄은 5Mbps 속도로 계속 쓸 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "요금제는 언제 바꿀 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "한 달에 한 번 바꿀 수 있고, 신청한 다음 날 0시부터 적용됩니다. 바꾼 달의 요금은 사용한 날짜만큼 나눠 계산합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "나에게 맞는 요금제는 어떻게 고르나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "최근 3개월 평균 데이터 사용량으로 고르면 됩니다. 월 5GB 미만이면 라이트, 5GB 이상 25GB 미만이면 스탠다드, 25GB 이상이면 프리미엄이 맞습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "가족 결합 할인은 얼마인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "가족 2회선 이상을 결합하면 회선마다 월 5,000원을 할인합니다. 할인은 결합 신청 다음 달 요금부터 적용됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "해외에서 데이터를 쓰려면 어떻게 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "출국 전에 로밍 패스를 신청하면 됩니다. 로밍 패스는 하루 9,900원이며, 신청하지 않고 데이터를 쓰면 로밍 데이터가 차단됩니다."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+/* 레이아웃: 흰 배경, 넓은 여백, 질문 목록을 위에서 아래로 읽는 단일 컬럼. 해설은 본문 뒤에 회색 영역으로 분리 */
+:root{
+  --bg:#FFFFFF; --soft:#F4F5F6; --ink:#191C1F; --sub:#5E666E; --rule:#E2E5E8;
+  --point:#EA002C; --point-soft:#FDEBEE;
+  --font:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121416; --soft:#1B1E21; --ink:#ECEEF0; --sub:#9AA2AA; --rule:#2A2E33;
+  --point:#F0334F; --point-soft:#3A1820; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121416; --soft:#1B1E21; --ink:#ECEEF0; --sub:#9AA2AA; --rule:#2A2E33;
+  --point:#F0334F; --point-soft:#3A1820; color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.75;word-break:keep-all;overflow-wrap:break-word;
+  padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));
+  padding-block:max(32px,env(safe-area-inset-top,0px)) max(56px,env(safe-area-inset-bottom,0px))}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--point);outline-offset:3px;border-radius:4px}
+p,h1,h2,h3{margin:0}
+.wrap{max-width:760px;margin:0 auto;display:grid;gap:40px}
+.banner{background:var(--point-soft);border-radius:12px;padding:12px 16px;font-size:14px}
+.banner b{color:var(--point)}
+nav.crumb ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;font-size:13px;color:var(--sub)}
+nav.crumb li+li::before{content:"/";margin-right:6px;color:var(--rule)}
+nav.crumb a{text-decoration-color:var(--rule);text-underline-offset:3px}
+header{display:grid;gap:12px}
+header h1{font-size:clamp(30px,5.4vw,44px);line-height:1.25;font-weight:900;letter-spacing:-.035em;text-wrap:balance}
+header p{color:var(--sub);font-size:17px}
+.updated{font-size:14px;color:var(--sub)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:460px;font-size:15px;font-variant-numeric:tabular-nums}
+caption{text-align:left;font-weight:700;padding-bottom:12px;font-size:15px}
+thead th{border-bottom:2px solid var(--ink)}
+th,td{border-bottom:1px solid var(--rule);padding:12px 10px;text-align:left}
+th[scope="col"]{color:var(--sub);font-weight:500;font-size:13px}
+th[scope="row"]{font-weight:700}
+td.n{white-space:nowrap}
+.faq{display:grid;border-top:2px solid var(--ink)}
+.faq article{padding-block:28px;border-bottom:1px solid var(--rule);display:grid;gap:10px}
+.faq h2{font-size:20px;font-weight:700;line-height:1.45;letter-spacing:-.015em}
+.faq .short{font-weight:700;background:var(--point-soft);border-radius:3px;padding:1px 2px}
+.faq .basis{font-size:13px;color:var(--sub)}
+section.explain{background:var(--soft);border-radius:20px;padding:32px;display:grid;gap:16px}
+section.explain h2{font-size:24px;font-weight:900;letter-spacing:-.03em}
+section.explain h3{font-size:16px;font-weight:700;margin-top:12px}
+section.explain p, section.explain li{font-size:15px}
+pre{margin:0;background:var(--bg);border-radius:12px;padding:16px;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.65;white-space:pre-wrap;word-break:break-all}
+.c{color:var(--sub)}
+ol.check,ul.plain{margin:0;padding-left:20px;display:grid;gap:8px}
+footer{font-size:13px;color:var(--sub);border-top:1px solid var(--rule);padding-top:20px}
+footer a{text-underline-offset:3px}
+@media (max-width:620px){section.explain{padding:22px}}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<!-- 이 페이지가 실제 서비스가 아님을 맨 위에 밝힌다 -->
+<p class="banner" role="note"><b>가상 예시</b> · GEO 퍼블리싱 연습용으로 만든 페이지입니다. 요금제 이름·가격·정책은 모두 지어낸 값이며 실제 통신사와 관계없습니다.</p>
+
+<!-- 탐색 경로: 이 페이지가 사이트 안에서 어디 있는지 알려주는 목록 -->
+<nav class="crumb" aria-label="현재 위치">
+  <ol>
+    <li><a href="index.html">포트폴리오</a></li>
+    <li>요금 안내</li>
+    <li aria-current="page">자주 묻는 질문</li>
+  </ol>
+</nav>
+
+<!-- main: 페이지의 핵심 본문은 하나뿐임을 표시. AI 크롤러가 메뉴·푸터를 빼고 이 영역을 읽는다 -->
+<main class="wrap">
+
+  <header>
+    <h1>요금제 자주 묻는 질문</h1>
+    <p>가상 요금제 3종의 데이터, 변경, 할인, 로밍 기준을 질문 5개로 정리했습니다.</p>
+    <!-- time 태그: 사람이 읽는 날짜와 기계가 읽는 날짜를 함께 적는다 -->
+    <p class="updated">최종 수정 <time datetime="2026-10-25">2026년 10월 25일</time></p>
+  </header>
+
+  <!-- 표는 caption(표 제목)과 th(머리칸)를 갖춰야 기계가 어느 값이 어느 항목인지 안다 -->
+  <section aria-labelledby="plans-title">
+    <div class="scroll">
+      <table>
+        <caption id="plans-title">가상 요금제 3종 기준표</caption>
+        <thead>
+          <tr><th scope="col">요금제</th><th scope="col">월 요금</th><th scope="col">기본 데이터</th><th scope="col">소진 후 속도</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">라이트</th><td class="n">33,000원</td><td class="n">7GB</td><td class="n">1Mbps</td></tr>
+          <tr><th scope="row">스탠다드</th><td class="n">55,000원</td><td class="n">30GB</td><td class="n">3Mbps</td></tr>
+          <tr><th scope="row">프리미엄</th><td class="n">75,000원</td><td class="n">150GB</td><td class="n">5Mbps</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 질문 하나 = article 하나. 질문은 h2 제목, 첫 문장은 바로 답(결론)으로 시작한다 -->
+  <section class="faq" aria-label="자주 묻는 질문">
+
+    <article id="q-data">
+      <h2>기본 데이터를 다 쓰면 요금이 더 나오나요?</h2>
+      <p><span class="short">추가 요금은 나오지 않고 속도만 제한됩니다.</span> 기본 데이터를 모두 쓰면 라이트는 1Mbps, 스탠다드는 3Mbps, 프리미엄은 5Mbps 속도로 계속 쓸 수 있습니다.</p>
+      <p class="basis">근거: 위 기준표의 소진 후 속도 열</p>
+    </article>
+
+    <article id="q-change">
+      <h2>요금제는 언제 바꿀 수 있나요?</h2>
+      <p><span class="short">한 달에 한 번 바꿀 수 있고, 신청한 다음 날 0시부터 적용됩니다.</span> 바꾼 달의 요금은 사용한 날짜만큼 나눠 계산합니다.</p>
+      <p class="basis">근거: 가상 이용약관 요금제 변경 조항</p>
+    </article>
+
+    <article id="q-choose">
+      <h2>나에게 맞는 요금제는 어떻게 고르나요?</h2>
+      <p><span class="short">최근 3개월 평균 데이터 사용량으로 고르면 됩니다.</span> 월 5GB 미만이면 라이트, 5GB 이상 25GB 미만이면 스탠다드, 25GB 이상이면 프리미엄이 맞습니다.</p>
+      <p class="basis">근거: 위 기준표의 기본 데이터 열. 기본 제공량의 약 80% 선에서 구간을 나눴습니다.</p>
+    </article>
+
+    <article id="q-family">
+      <h2>가족 결합 할인은 얼마인가요?</h2>
+      <p><span class="short">가족 2회선 이상을 결합하면 회선마다 월 5,000원을 할인합니다.</span> 할인은 결합 신청 다음 달 요금부터 적용됩니다.</p>
+      <p class="basis">근거: 가상 결합 할인 안내</p>
+    </article>
+
+    <article id="q-roaming">
+      <h2>해외에서 데이터를 쓰려면 어떻게 하나요?</h2>
+      <p><span class="short">출국 전에 로밍 패스를 신청하면 됩니다.</span> 로밍 패스는 하루 9,900원이며, 신청하지 않고 데이터를 쓰면 로밍 데이터가 차단됩니다.</p>
+      <p class="basis">근거: 가상 로밍 요금 안내</p>
+    </article>
+
+  </section>
+</main>
+
+<!-- ===== 아래는 채용 담당자용 해설. 실제 게시 페이지라면 넣지 않는 부분 ===== -->
+<section class="explain" aria-labelledby="explain-title">
+  <h2 id="explain-title">이 페이지를 이렇게 만들었습니다</h2>
+
+  <h3>1. 질문부터 정했습니다</h3>
+  <ul class="plain">
+    <li>사람이 생성형 검색에 실제로 던질 법한 문장으로 질문을 썼습니다. 요금제 이름이 아니라 상황으로 묻는 질문입니다.</li>
+    <li>모든 답의 첫 문장은 질문에 대한 결론입니다. AI 답변이 한 문장만 인용해도 뜻이 통하게 하려는 배치입니다.</li>
+    <li>숫자가 들어간 답에는 근거 줄을 붙였습니다. 요금처럼 자주 바뀌는 정보는 출처와 수정일이 있어야 오래된 정보가 인용되는 일을 줄일 수 있습니다.</li>
+  </ul>
+
+  <h3>2. 태그로 역할을 표시했습니다</h3>
+<pre><span class="c">&lt;!-- main: 본문은 여기 하나 --&gt;</span>
+&lt;main&gt;
+  &lt;header&gt;&lt;h1&gt;요금제 자주 묻는 질문&lt;/h1&gt; ... &lt;/header&gt;
+  <span class="c">&lt;!-- 표: caption(표 제목) + th(머리칸) --&gt;</span>
+  &lt;table&gt;&lt;caption&gt;가상 요금제 3종 기준표&lt;/caption&gt; ... &lt;/table&gt;
+  <span class="c">&lt;!-- 질문 하나 = article 하나, 질문은 h2 --&gt;</span>
+  &lt;article id="q-data"&gt;
+    &lt;h2&gt;기본 데이터를 다 쓰면 요금이 더 나오나요?&lt;/h2&gt;
+    &lt;p&gt;추가 요금은 나오지 않고 속도만 제한됩니다. ...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;</pre>
+  <p>div만 쌓으면 화면은 같아 보여도 기계는 어디가 제목이고 어디가 답인지 모릅니다. main, article, h2, table처럼 의미를 가진 태그를 쓰는 것이 시맨틱 마크업입니다.</p>
+
+  <h3>3. 같은 내용을 구조화 데이터로 한 번 더 적었습니다</h3>
+<pre id="jsonld-view" aria-label="이 페이지에 들어 있는 구조화 데이터"></pre>
+  <p>위 내용은 이 페이지 머리에 실제로 들어 있는 JSON-LD를 그대로 읽어 보여주는 것입니다. 질문과 답 문장은 화면 본문과 같아야 하므로, 본문을 고치면 이 부분도 같이 고칩니다.</p>
+  <p class="basis">참고: 구글은 2023년 8월부터 FAQ 리치 결과를 정부·보건 분야의 권위 있는 사이트 위주로만 보여줍니다. 그래서 이 작업의 목적은 검색 결과 장식이 아니라, 질문과 답의 짝을 기계가 정확히 읽게 하는 데 둡니다.</p>
+
+  <h3>4. 게시 후 점검 순서</h3>
+  <ol class="check">
+    <li>스키마 검사기와 구글 리치 결과 테스트에 주소를 넣어 오류·경고가 없는지 확인</li>
+    <li>구조화 데이터의 질문·답과 화면 본문이 한 글자도 다르지 않은지 대조</li>
+    <li>robots.txt와 meta robots가 검색 로봇을 막고 있지 않은지 확인</li>
+    <li>구글 서치 콘솔 URL 검사와 네이버 서치어드바이저 웹페이지 수집 요청으로 색인 요청</li>
+    <li>요금·정책이 바뀌면 본문, 기준표, JSON-LD, 수정일을 같은 날 함께 갱신</li>
+  </ol>
+</section>
+
+<footer>
+  <p>Claude를 활용해 2026년 10월에 만든 연습 페이지입니다. 페이지 구조와 점검 기준은 SK텔레콤 GEO &amp; 브랜드 검색광고 담당자 공고의 수행직무를 기준으로 잡았습니다. · <a href="index.html">포트폴리오로 돌아가기</a></p>
+</footer>
+</div>
+
+<script>
+/* 머리에 있는 JSON-LD를 읽어 해설 칸에 그대로 보여준다 (사람이 확인하기 위한 장치) */
+(function(){
+  var src = document.querySelector('script[type="application/ld+json"]');
+  var out = document.getElementById('jsonld-view');
+  if(!src || !out) return;
+  try { out.textContent = JSON.stringify(JSON.parse(src.textContent), null, 2); }
+  catch(e){ out.textContent = '구조화 데이터를 읽지 못했습니다: ' + e.message; }
+})();
+</script>
+</body>
+</html>

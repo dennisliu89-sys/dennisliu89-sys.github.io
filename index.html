@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://dennisliu89-sys.github.io/">
+<title>유동재 검색 지면 포트폴리오</title>
+<meta name="description" content="검색광고 운영과 생성형 검색 최적화를 함께 다루는 퍼포먼스 마케터 유동재의 포트폴리오">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": "유동재 검색 지면 포트폴리오",
+  "inLanguage": "ko",
+  "dateModified": "2026-10-25",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "유동재",
+    "jobTitle": "퍼포먼스마케팅 AE",
+    "worksFor": { "@type": "Organization", "name": "플레이디" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "중앙대학교" },
+    "knowsAbout": ["검색광고 운영", "브랜드 검색광고", "생성형 검색 최적화", "구조화 데이터", "Claude Code 업무 자동화"],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "검색광고마케터 1급" },
+      { "@type": "EducationalOccupationalCredential", "name": "Google Analytics Certification" },
+      { "@type": "EducationalOccupationalCredential", "name": "Google Ads Search Certification" },
+      { "@type": "EducationalOccupationalCredential", "name": "NAVER Ads Expert - SA" }
+    ]
+  },
+  "hasPart": {
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "GEO 퍼블리싱 연습 페이지" },
+      { "@type": "ListItem", "position": 2, "name": "네이버 SA 소재·심의·URL 대조 시스템" },
+      { "@type": "ListItem", "position": 3, "name": "데일리 SA 검수와 AI브리핑 키워드 검증" },
+      { "@type": "ListItem", "position": 4, "name": "리포트 수집 자동화 2종" },
+      { "@type": "ListItem", "position": 5, "name": "LGE.COM 앱 캠페인 지표 이상 진단" },
+      { "@type": "ListItem", "position": 6, "name": "유튜브 채널 다국어 검색 최적화" }
+    ]
+  }
+}
+</script>
+
+<style>
+/* Layout: 여백 넓은 미니멀. 흰 배경 위 큰 제목, 상단 요약만 벤토 그리드, 프로젝트는 왼쪽 4칸 정보 + 오른쪽 8칸 본문의 2단 */
+:root{
+  --bg:#FFFFFF; --soft:#F4F5F6; --ink:#191C1F; --sub:#5E666E; --rule:#E2E5E8;
+  --point:#EA002C; --point-soft:#FDEBEE; --base:#8A9299;
+  --font:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --w:1080px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121416; --soft:#1B1E21; --ink:#ECEEF0; --sub:#9AA2AA; --rule:#2A2E33;
+  --point:#F0334F; --point-soft:#3A1820; --base:#76808A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121416; --soft:#1B1E21; --ink:#ECEEF0; --sub:#9AA2AA; --rule:#2A2E33;
+  --point:#F0334F; --point-soft:#3A1820; --base:#76808A; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.75;
+  font-variant-numeric:tabular-nums;word-break:keep-all;overflow-wrap:break-word;
+  padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-block:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+p,h1,h2,h3,dl,dd,figure{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+a{color:inherit}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--point);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--w);margin:0 auto}
+
+/* 상단 바 */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--rule);margin-inline:calc(-1 * max(20px,env(safe-area-inset-left,0px)))}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px;padding-inline:max(20px,env(safe-area-inset-left,0px))}
+.bar strong{font-weight:700;font-size:15px}
+.bar nav{display:flex;gap:20px;font-size:14px;overflow-x:auto}
+.bar nav a{text-decoration:none;color:var(--sub);white-space:nowrap}
+.bar nav a:hover{color:var(--ink)}
+
+/* 히어로 */
+.hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:start;padding-block:88px 72px}
+.hero .for{font-size:14px;color:var(--sub);margin-bottom:20px}
+h1{font-size:clamp(34px,5.4vw,56px);line-height:1.22;font-weight:900;letter-spacing:-.035em;text-wrap:balance}
+.hero .intro{margin-top:24px;font-size:17px;color:var(--sub);max-width:34em}
+.hero .who{margin-top:28px;display:grid;gap:2px;font-size:14.5px}
+.hero .who span{color:var(--sub)}
+
+/* AI 답변 카드: 페이지에서 유일하게 강조하는 장치 */
+.answer{border:1px solid var(--rule);border-radius:16px;background:var(--bg);box-shadow:0 1px 0 var(--rule),0 18px 40px -28px rgba(25,28,31,.35)}
+.answer .q{display:flex;gap:10px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--rule);font-size:14.5px;font-weight:500}
+.answer .q svg{flex:none;color:var(--sub)}
+.answer .a{padding:20px;display:grid;gap:14px;font-size:15px;line-height:1.75}
+.answer mark{background:var(--point-soft);color:var(--ink);padding:1px 2px;border-radius:3px}
+a.cite{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;margin-left:4px;padding:0 5px;border-radius:10px;background:var(--point);color:#fff;font-size:11px;font-weight:700;text-decoration:none;vertical-align:2px}
+.answer .foot{font-size:12.5px;color:var(--sub);padding-top:12px;border-top:1px solid var(--rule)}
+
+/* 벤토 요약 */
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding-bottom:96px}
+.tile{background:var(--soft);border-radius:18px;padding:24px 24px 22px;display:grid;gap:6px;align-content:space-between;min-height:168px;text-decoration:none;color:inherit;transition:background-color .15s}
+.tile:hover{background:var(--rule)}
+.tile.wide{grid-column:span 2}
+.tile .v{font-size:clamp(26px,3vw,34px);font-weight:900;letter-spacing:-.03em;line-height:1.15}
+.tile .v small{font-size:.55em;font-weight:700;letter-spacing:0}
+.tile .k{font-size:14px;color:var(--sub);line-height:1.5}
+.tile .src{font-size:12.5px;color:var(--sub)}
+.tile .src b{color:var(--point);font-weight:700}
+
+/* 섹션 공통 */
+.sec{padding-block:80px;border-top:1px solid var(--rule);scroll-margin-top:72px}
+.sec > h2{font-size:clamp(26px,3.2vw,34px);font-weight:900;letter-spacing:-.03em;line-height:1.3;text-wrap:balance}
+.sec > .lead{margin-top:12px;color:var(--sub);max-width:42em}
+
+/* 공고 매핑 */
+.axes{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.axes h3{font-size:17px;font-weight:700;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.axes li{padding-block:14px;border-bottom:1px solid var(--rule);display:grid;gap:4px;font-size:15px}
+.axes li a{font-size:13px;color:var(--sub);text-decoration-color:var(--rule);text-underline-offset:3px}
+.axes li a:hover{color:var(--point)}
+.kind{font-size:12px;font-weight:700;color:var(--sub)}
+.kind.prac{color:var(--point)}
+
+/* 프로젝트 */
+.proj{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px}
+.proj .side{display:grid;gap:20px;align-content:start;position:sticky;top:96px}
+.proj .ref{font-size:13px;font-weight:700;color:var(--point)}
+.proj h2{font-size:clamp(24px,2.8vw,30px);font-weight:900;letter-spacing:-.03em;line-height:1.32;text-wrap:balance}
+.meta{display:grid;gap:10px;font-size:14px}
+.meta div{display:grid;grid-template-columns:44px 1fr;gap:12px}
+.meta dt{color:var(--sub)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags li{font-size:12.5px;padding:3px 10px;border-radius:999px;border:1px solid var(--rule);color:var(--sub)}
+.proj .main{display:grid;gap:32px;min-width:0}
+.headline{font-size:clamp(18px,2vw,21px);font-weight:700;line-height:1.6;letter-spacing:-.01em;max-width:34em}
+.facts{display:grid;border-top:1px solid var(--ink)}
+.facts div{display:grid;grid-template-columns:72px 1fr;gap:20px;padding-block:18px;border-bottom:1px solid var(--rule)}
+.facts dt{font-weight:700;font-size:14.5px}
+.facts dd{font-size:15px;color:var(--ink)}
+.facts dd ul{display:grid;gap:6px}
+.facts dd li{padding-left:14px;position:relative}
+.facts dd li::before{content:"";position:absolute;left:0;top:.8em;width:5px;height:1px;background:var(--sub)}
+.note{font-size:13px;color:var(--sub)}
+.checks{display:grid;gap:12px}
+.checks h3{font-size:16px;font-weight:700}
+.tbl-wrap{overflow-x:auto}
+.checks table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+.checks th,.checks td{text-align:left;vertical-align:top;padding:10px 8px;border-bottom:1px solid var(--rule)}
+.checks thead th{font-size:12.5px;font-weight:500;color:var(--sub);border-bottom:2px solid var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;justify-self:start;padding:12px 20px;border-radius:999px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700;font-size:14.5px}
+.btn:hover{background:var(--point);color:#fff}
+
+/* 시각 자료 공통 */
+figure.viz{background:var(--soft);border-radius:18px;padding:28px;display:grid;gap:18px}
+figure.viz figcaption{font-size:14px;font-weight:700}
+figure.viz .cap-sub{font-weight:400;color:var(--sub)}
+.bars{display:grid;gap:14px}
+.bar-row{display:grid;grid-template-columns:minmax(0,150px) 1fr;gap:14px;align-items:center;font-size:14px}
+.bar-row .lab{color:var(--sub);line-height:1.4}
+.track{position:relative;height:28px}
+.fill{height:100%;border-radius:0 4px 4px 0;background:var(--base);min-width:2px}
+.fill.on{background:var(--point)}
+.track .val{position:absolute;top:50%;transform:translateY(-50%);font-size:13.5px;font-weight:700;padding-left:8px;white-space:nowrap}
+.axis{display:grid;grid-template-columns:minmax(0,150px) 1fr;gap:14px;font-size:11.5px;color:var(--sub)}
+.axis .ticks{display:flex;justify-content:space-between;border-top:1px solid var(--rule);padding-top:4px}
+
+.dots{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:8px;max-width:420px}
+.dot{aspect-ratio:1;max-width:100%;border-radius:50%;background:var(--base)}
+.dot.out{background:transparent;border:2px solid var(--point)}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--sub)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--base)}
+.legend i.out{background:transparent;border:2px solid var(--point)}
+
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--bg);border-radius:12px;padding:14px 12px;font-size:13px;line-height:1.5;display:grid;gap:6px;align-content:start}
+.steps li::before{content:counter(s);font-weight:900;font-size:13px;color:var(--point)}
+.steps li.me{outline:2px solid var(--point);outline-offset:-2px}
+
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.pane{background:var(--bg);border-radius:12px;padding:16px 18px;display:grid;gap:8px;align-content:start;min-width:0}
+.pane .t{font-size:12.5px;font-weight:700;color:var(--sub)}
+.pane .qq{font-weight:700;font-size:14.5px}
+.pane p{font-size:14px}
+.pane pre{margin:0;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;line-height:1.65;white-space:pre-wrap;word-break:break-all}
+.pane mark,.pane .hl{background:var(--point-soft);color:var(--ink);border-radius:3px}
+
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.nums div{background:var(--bg);border-radius:12px;padding:16px 18px;display:grid;gap:2px}
+.nums b{font-size:22px;font-weight:900;letter-spacing:-.02em}
+.nums span{font-size:13px;color:var(--sub)}
+
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.duo article{background:var(--soft);border-radius:18px;padding:24px;display:grid;gap:14px;align-content:start;min-width:0}
+.duo h3{font-size:17px;font-weight:700;line-height:1.45}
+.duo .who{font-size:13px;color:var(--sub)}
+.duo ul{display:grid;gap:6px;font-size:14.5px}
+.duo ul li{padding-left:14px;position:relative}
+.duo ul li::before{content:"";position:absolute;left:0;top:.8em;width:5px;height:1px;background:var(--sub)}
+
+/* 자격 */
+.cols{margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.cols h3{font-size:17px;font-weight:700;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.cols li{padding-block:12px;border-bottom:1px solid var(--rule);font-size:15px}
+.cols li span{color:var(--sub)}
+
+details{margin-top:28px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;padding-block:18px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:400;color:var(--sub)}
+details[open] summary::after{content:"−"}
+details pre{margin:0 0 20px;background:var(--soft);border-radius:12px;padding:18px;overflow-x:auto;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.6}
+
+footer{padding-block:48px 72px;border-top:1px solid var(--rule);font-size:13px;color:var(--sub);display:grid;gap:4px}
+
+@media (max-width:960px){
+  .hero{grid-template-columns:minmax(0,1fr);gap:40px;padding-block:56px 48px}
+  .bento{grid-template-columns:repeat(2,minmax(0,1fr));padding-bottom:64px}
+  .axes,.cols{grid-template-columns:minmax(0,1fr);gap:32px}
+  .proj{grid-template-columns:minmax(0,1fr);gap:28px}
+  .proj .side{position:static}
+  .sec{padding-block:56px}
+  .steps{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:620px){
+  .bar nav{display:none}
+  .bento{grid-template-columns:minmax(0,1fr)}
+  .tile.wide{grid-column:auto}
+  .tile{min-height:0}
+  .pair,.nums,.duo{grid-template-columns:minmax(0,1fr)}
+  .bar-row,.axis{grid-template-columns:minmax(0,1fr)}
+  .axis .pad{display:none}
+  .facts div{grid-template-columns:minmax(0,1fr);gap:4px}
+  figure.viz{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <strong>유동재</strong>
+    <nav aria-label="페이지 메뉴">
+      <a href="#map">공고 업무별 근거</a>
+      <a href="#p1">프로젝트</a>
+      <a href="#cred">자격·도구</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" aria-labelledby="hero-t">
+    <div>
+      <p class="for">SK텔레콤 GEO &amp; 브랜드 검색광고 담당자 지원</p>
+      <h1 id="hero-t">검색 결과의 문장을<br>정확하게 만드는 사람</h1>
+      <p class="intro">광고 지면에서는 심의 문구와 랜딩 주소가 정확한지 대조했고, 생성형 검색 지면에서는 어떤 키워드가 AI 답변에 노출되는지 판정해 왔습니다.</p>
+      <dl class="who">
+        <dt>유동재</dt>
+        <dd><span>플레이디 퍼포먼스마케팅 AE, 한화손해보험 검색광고 운영</span></dd>
+      </dl>
+    </div>
+
+    <article class="answer" aria-label="이 포트폴리오를 AI 답변 형식으로 줄인 요약">
+      <div class="q">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>GEO와 브랜드 검색광고를 함께 맡길 지원자가 해 본 일은?</span>
+      </div>
+      <div class="a">
+        <p>한화손해보험 검색광고를 운영하며 <mark>소재 문구와 랜딩 URL을 심의안과 대조하는 시스템을 Claude Code로 만들어 손으로 하던 검수를 문구 2,802건, URL 2,249건의 자동 판정으로 바꿨습니다.</mark><a class="cite" href="#p2" aria-label="근거 프로젝트 2">2</a></p>
+        <p>네이버 AI브리핑 노출을 판정하는 검증 단계를 만들고 <mark>시간차 2회 재확인에서 통과 10건 중 4건의 잘못된 판정을 찾아냈습니다.</mark><a class="cite" href="#p3" aria-label="근거 프로젝트 3">3</a></p>
+        <p>지원을 준비하며 <mark>가상 요금 FAQ 페이지에 시맨틱 마크업과 FAQPage 구조화 데이터를 적용했습니다.</mark><a class="cite" href="#p1" aria-label="근거 프로젝트 1">1</a></p>
+        <p class="foot">AI 답변이 출처를 다는 방식으로 이 포트폴리오를 요약했습니다. 번호를 누르면 근거 프로젝트로 이동합니다.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="bento" aria-label="핵심 수치">
+    <a class="tile wide" href="#p2">
+      <span class="v">2,802 · 2,249<small>건</small></span>
+      <span class="k">자동 판정한 소재 문구와 랜딩 URL<br>이전에는 심의 엑셀 15개와 소재·확장소재 2,457개를 손으로 대조</span>
+      <span class="src">프로젝트 <b>2</b></span>
+    </a>
+    <a class="tile" href="#p3">
+      <span class="v">10건 중 4건</span>
+      <span class="k">재확인에서 탈락한 통과 판정</span>
+      <span class="src">프로젝트 <b>3</b></span>
+    </a>
+    <a class="tile" href="#p3">
+      <span class="v">12,300<small>개</small></span>
+      <span class="k">자동 생성한 AI브리핑 키워드 후보</span>
+      <span class="src">프로젝트 <b>3</b></span>
+    </a>
+    <a class="tile wide" href="#p1">
+      <span class="v">질문·답 5쌍 일치</span>
+      <span class="k">FAQ 본문과 구조화 데이터를 글자 단위로 대조</span>
+      <span class="src">프로젝트 <b>1</b></span>
+    </a>
+    <a class="tile" href="#p5">
+      <span class="v">CPI −14.8%</span>
+      <span class="k">LGE.COM 앱 캠페인, 전월 대비</span>
+      <span class="src">프로젝트 <b>5</b></span>
+    </a>
+    <a class="tile" href="#p6">
+      <span class="v">1,315<small>만 회</small></span>
+      <span class="k">다국어 검색 최적화한 채널 누적 조회수</span>
+      <span class="src">프로젝트 <b>6</b></span>
+    </a>
+  </section>
+
+  <section class="sec" id="map" aria-labelledby="map-t">
+    <h2 id="map-t">공고 업무별 근거</h2>
+    <p class="lead">공고의 수행직무 세 가지에 맞춰 근거를 나눴습니다. 실무로 해 본 일과 지원을 준비하며 연습한 일을 구분했습니다.</p>
+    <div class="axes">
+      <div>
+        <h3>웹 콘텐츠 퍼블리싱</h3>
+        <ul>
+          <li><span class="kind prac">연습</span>시맨틱 마크업과 반응형으로 요금 FAQ 페이지 제작<a href="#p1">프로젝트 1</a></li>
+          <li><span class="kind prac">연습</span>FAQPage, ProfilePage 구조화 데이터 작성<a href="#p1">프로젝트 1</a></li>
+          <li><span class="kind">실무</span>네이버 검색 결과를 자동 판정하는 검증 단계 설계·운영<a href="#p3">프로젝트 3</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>GEO 콘텐츠 작성 지원</h3>
+        <ul>
+          <li><span class="kind">실무</span>AI브리핑에 노출되는 키워드만 골라내는 판정 설계<a href="#p3">프로젝트 3</a></li>
+          <li><span class="kind">실무</span>약관 원문 대조로 없는 보장을 말하는 키워드 차단<a href="#p3">프로젝트 3</a></li>
+          <li><span class="kind">실무</span>시청 국가 데이터로 다국어 메타데이터 설계<a href="#p6">프로젝트 6</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>SA / 브랜드 검색광고 운영</h3>
+        <ul>
+          <li><span class="kind">실무</span>소재 문구를 심의안과 글자 단위로 대조<a href="#p2">프로젝트 2</a></li>
+          <li><span class="kind">실무</span>UTM 규칙 7종으로 랜딩 URL을 접속 없이 점검<a href="#p2">프로젝트 2</a></li>
+          <li><span class="kind">실무</span>리포트 수집 자동화, 지표 이상 진단<a href="#p4">프로젝트 4, 5</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 프로젝트 1 -->
+  <section class="sec proj" id="p1" aria-labelledby="p1-t">
+    <div class="side">
+      <span class="ref">프로젝트 1 · 연습</span>
+      <h2 id="p1-t">GEO 퍼블리싱 연습 페이지</h2>
+      <dl class="meta">
+        <div><dt>시기</dt><dd>2026년 10월, 지원 준비</dd></div>
+        <div><dt>방법</dt><dd>Claude로 제작, 구조와 점검 기준은 공고 수행직무 순서로 설계</dd></div>
+        <div><dt>범위</dt><dd>가상 요금제 데이터. 실제 통신사 정보가 아닙니다</dd></div>
+      </dl>
+      <ul class="tags"><li>웹 콘텐츠 퍼블리싱</li><li>구조화 데이터</li></ul>
+    </div>
+    <div class="main">
+      <p class="headline">질문을 먼저 정하고, 결론 문장을 맨 앞에 두고, 같은 내용을 구조화 데이터로 한 번 더 적어 AI가 정확히 인용할 수 있는 요금 FAQ 페이지를 만들었습니다.</p>
+      <figure class="viz">
+        <figcaption>본문과 구조화 데이터는 같은 문장이어야 합니다 <span class="cap-sub">질문 5쌍 모두 글자 단위로 일치하는지 검사했습니다</span></figcaption>
+        <div class="pair">
+          <div class="pane">
+            <span class="t">화면에 보이는 본문</span>
+            <p class="qq">기본 데이터를 다 쓰면 요금이 더 나오나요?</p>
+            <p><mark>추가 요금은 나오지 않고 속도만 제한됩니다.</mark> 기본 데이터를 모두 쓰면 라이트는 1Mbps, 스탠다드는 3Mbps, 프리미엄은 5Mbps 속도로 계속 쓸 수 있습니다.</p>
+          </div>
+          <div class="pane">
+            <span class="t">기계가 읽는 구조화 데이터</span>
+<pre>"@type": "Question",
+"name": "기본 데이터를 다 쓰면 요금이 더 나오나요?",
+"acceptedAnswer": {
+  "@type": "Answer",
+  "text": "<span class="hl">추가 요금은 나오지 않고 속도만 제한됩니다.</span> ..."
+}</pre>
+          </div>
+        </div>
+      </figure>
+      <dl class="facts">
+        <div><dt>문제</dt><dd>공고 필수요건인 HTML 퍼블리싱과 JSON-LD를 실무로 해 본 적이 없었습니다. 주제는 요금 FAQ로 골랐습니다. 요금과 혜택은 자주 바뀌어 오래된 정보가 인용될 위험이 가장 큰 영역이기 때문입니다.</dd></div>
+        <div><dt>설계</dt><dd><ul><li>요금제 이름이 아니라 상황으로 묻는 질문 5개</li><li>모든 답의 첫 문장을 결론으로 배치</li><li>숫자가 있는 답마다 근거 줄, 페이지에 수정일 표기</li><li>main, article, h2, 표 제목처럼 역할이 있는 태그로 본문 구성</li></ul></dd></div>
+        <div><dt>점검</dt><dd>스키마 검사, 본문 대조, robots 확인, 서치 콘솔과 서치어드바이저 수집 요청 순서를 페이지 하단에 정리했습니다.</dd></div>
+      </dl>
+      <div class="checks">
+        <h3>점검 기록</h3>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th scope="col">점검</th><th scope="col">방법</th><th scope="col">결과</th><th scope="col">날짜</th></tr></thead>
+          <tbody>
+            <tr><td>구조화 데이터 문법</td><td>Schema.org 검사기에 코드 입력</td><td>FAQPage 1건 인식, 오류 0개, 경고 0개</td><td>2026.10.25</td></tr>
+            <tr><td>본문과 구조화 데이터 일치</td><td>질문·답 문장을 글자 단위로 비교하는 대조 스크립트</td><td>5쌍 모두 일치</td><td>2026.10.25</td></tr>
+            <tr><td>수집 요청</td><td>구글 서치 콘솔, 네이버 서치어드바이저</td><td>실제 주소에 게시한 뒤 진행</td><td>게시 후</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <a class="btn" href="faq.html">연습 페이지 열기</a>
+    </div>
+  </section>
+
+  <!-- 프로젝트 2 -->
+  <section class="sec proj" id="p2" aria-labelledby="p2-t">
+    <div class="side">
+      <span class="ref">프로젝트 2 · 실무</span>
+      <h2 id="p2-t">네이버 SA <span style="white-space:nowrap">소재·심의·URL</span> 대조 시스템</h2>
+      <dl class="meta">
+        <div><dt>소속</dt><dd>플레이디, 한화손해보험 네이버 검색광고</dd></div>
+        <div><dt>기간</dt><dd>2026.07 – 2026.09</dd></div>
+        <div><dt>역할</dt><dd>기획과 구현, Claude Code 사용, 팀 내 배포</dd></div>
+      </dl>
+      <ul class="tags"><li>소재 등록·운영</li><li>랜딩 구조 점검</li><li>표현 검수</li></ul>
+    </div>
+    <div class="main">
+      <p class="headline">대조 단위를 실측으로 다시 정의하고 랜딩 URL을 접속 없이 문자열로 대조해, 손으로 하던 심의·URL 검수를 자동 판정으로 바꿨습니다.</p>
+      <figure class="viz">
+        <figcaption>심의안과 노출 소재의 일치율 <span class="cap-sub">노출 소재 475개 실측</span></figcaption>
+        <div class="bars" role="img" aria-label="행 단위로 대조하면 5.1%, 항목 단위로 바꾸면 제목 97%, 설명 93%가 일치">
+          <div class="bar-row"><span class="lab">처음 가설<br>심의안 한 행 단위</span><div class="track"><div class="fill" style="width:5.1%"></div><span class="val" style="left:5.1%">5.1%</span></div></div>
+          <div class="bar-row"><span class="lab">재정의 후<br>제목 항목 단위</span><div class="track"><div class="fill on" style="width:97%"></div><span class="val" style="left:auto;right:8px;color:#fff">97%</span></div></div>
+          <div class="bar-row"><span class="lab">재정의 후<br>설명 항목 단위</span><div class="track"><div class="fill on" style="width:93%"></div><span class="val" style="left:auto;right:calc(7% + 8px);color:#fff">93%</span></div></div>
+        </div>
+        <div class="axis" aria-hidden="true"><span class="pad"></span><div class="ticks"><span>0%</span><span>50%</span><span>100%</span></div></div>
+      </figure>
+      <dl class="facts">
+        <div><dt>문제</dt><dd>보험 광고는 띄어쓰기 하나만 달라도 심의 위반입니다. 심의 엑셀 15개와 계정 소재 844개, 확장소재 1,613개를 회차마다 손으로 맞춰야 했고, 랜딩 URL을 직접 열어 점검하면 그 방문이 utm 값과 함께 광고주 유입 데이터에 섞였습니다.</dd></div>
+        <div><dt>판단</dt><dd><ul><li>운영에서 제목과 설명을 자유 조합하는 것을 확인하고 항목별 목록 대조로 재정의, 정상 소재 451개의 오보고를 첫 회차 전에 차단</li><li>고객 눈에 보이는 차이는 불일치, 보이지 않는 문자 차이는 일치로 판정 기준 분리</li><li>UTM 규칙 7종을 HTML 사이트 UTM Builder로 정리해 기준값으로 두고 주소 문자열만 대조</li><li>API 약관과 사내 지침을 검토해 이미지 대조와 매일 자동 실행은 범위에서 제외</li></ul></dd></div>
+        <div><dt>결과</dt><dd>문구 2,802건과 URL 2,249건을 자동 판정합니다. 틀린 심의를 직접 만든 네거티브 테스트 3회에서 탐지율 100%, 오탐 0을 확인했고, 키를 뺀 배포 폴더와 5단계 안내문을 붙여 팀에 배포했습니다.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 프로젝트 3 -->
+  <section class="sec proj" id="p3" aria-labelledby="p3-t">
+    <div class="side">
+      <span class="ref">프로젝트 3 · 실무</span>
+      <h2 id="p3-t">데일리 SA 검수와 AI브리핑 키워드 검증</h2>
+      <dl class="meta">
+        <div><dt>소속</dt><dd>플레이디, 한화손해보험 네이버 검색광고</dd></div>
+        <div><dt>기간</dt><dd>2026.07 – 재직 중</dd></div>
+        <div><dt>역할</dt><dd>기획과 구현, Claude Code 사용</dd></div>
+      </dl>
+      <ul class="tags"><li>생성형 검색 노출</li><li>사실 확인</li><li>노출 모니터링</li></ul>
+    </div>
+    <div class="main">
+      <p class="headline">생성형 검색 지면인 네이버 AI브리핑에 실제로 노출되는 키워드만 골라내고, 한 번의 판정을 믿지 않는 재확인 구조로 잘못된 보고를 막았습니다.</p>
+      <figure class="viz">
+        <figcaption>검수 순서 <span class="cap-sub">검증 단계를 운영하던 때의 순서, 마지막 단계는 사람이 판단</span></figcaption>
+        <ol class="steps">
+          <li>검색어 로우를 정책 금지어, 보장 없음, 계약 관리성 3축으로 필터</li>
+          <li>약관 PDF 9종의 담보 861종과 대조해 없는 보장 차단</li>
+          <li>AI브리핑 최상단 노출, 자사 광고 미노출 두 조건 판정</li>
+          <li>통과 후보만 40~70초 간격으로 2회 재확인</li>
+          <li class="me">최종 제외 여부는 직접 판단</li>
+        </ol>
+      </figure>
+      <figure class="viz">
+        <figcaption>한 번 통과한 키워드 10건을 다시 확인한 결과 </figcaption>
+        <div class="dots" role="img" aria-label="10건 중 6건 유지, 4건 재확인에서 탈락">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="dot out"></span><span class="dot out"></span><span class="dot out"></span><span class="dot out"></span>
+        </div>
+        <div class="legend"><span><i></i>유지 6건</span><span><i class="out"></i>재확인에서 탈락 4건</span></div>
+      </figure>
+      <dl class="facts">
+        <div><dt>문제</dt><dd>데일리 SA 검수는 매일 아침 40분 이상 드는 수작업이었습니다.</dd></div>
+        <div><dt>판단</dt><dd>네이버 광고는 예산과 시간대에 따라 켜졌다 꺼지므로 한 번의 조회는 믿을 수 없다고 봤습니다. 광고 링크는 추적 주소라 표시 URL과 광고주명으로 자사 여부를 판정했고, 8회 연속 미검출이면 화면 구조가 바뀐 것으로 보고 자동 중단하게 했습니다.</dd></div>
+        <div><dt>결과</dt><dd>규칙 통과 후보 12,300개를 자동으로 만들었습니다. 통과 처리한 10건을 2회씩 다시 조회하자 4건이 탈락했고, 이후 통과 후보는 재확인을 거쳐야만 보고하게 했습니다. 약관 대조는 업로드한 원문 안에서만 답하는 노트북을 MCP로 연결해 교차 확인했습니다. 이후 데일리 SA 검수가 후보 키워드를 매일 제공하게 되면서 별도 검증 단계는 중단했고, 데일리 검수는 지금도 리포트를 받은 뒤 Claude 스킬로 실행합니다.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 프로젝트 4 -->
+  <section class="sec proj" id="p4" aria-labelledby="p4-t">
+    <div class="side">
+      <span class="ref">프로젝트 4 · 실무</span>
+      <h2 id="p4-t">리포트 수집 자동화 2종</h2>
+      <dl class="meta">
+        <div><dt>소속</dt><dd>플레이디, 한화손해보험 검색광고</dd></div>
+        <div><dt>기간</dt><dd>2026.07 – 2026.10</dd></div>
+      </dl>
+      <ul class="tags"><li>지표 모니터링</li><li>운영 리포트</li></ul>
+    </div>
+    <div class="main">
+      <p class="headline">운영 리포트의 원천 데이터를 빠짐없이, 맞는 날짜로 모으는 일을 자동화했습니다. 두 도구는 대상과 기여도가 달라 나눠 적었습니다.</p>
+      <div class="duo">
+        <article aria-labelledby="p4a">
+          <span class="who">유입현황 리포팅, 기여도 70%</span>
+          <h3 id="p4a">타 팀 프로그램을 팀 기준으로 커스텀</h3>
+          <div class="bars" role="img" aria-label="회차당 작업 10분에서 약 1분으로">
+            <div class="bar-row" style="grid-template-columns:52px 1fr"><span class="lab">이전</span><div class="track"><div class="fill" style="width:100%"></div><span class="val" style="left:auto;right:8px;color:#fff">10분</span></div></div>
+            <div class="bar-row" style="grid-template-columns:52px 1fr"><span class="lab">이후</span><div class="track"><div class="fill on" style="width:10%"></div><span class="val" style="left:10%">약 1분</span></div></div>
+          </div>
+          <ul><li>하루 6회, 8개 매체를 시트에 손으로 옮기던 작업</li><li>원본은 보존하고 팀 분류 기준만 덧입혀 매체 합계와 대조</li><li>수집 누락 해소: 카카오모먼트 28건에서 94건, 구글 캠페인 9개에서 19개</li></ul>
+        </article>
+        <article aria-labelledby="p4b">
+          <span class="who">데일리 리포트, 기여도 100%</span>
+          <h3 id="p4b">5개 플랫폼 수집을 크롬 확장 프로그램 1회 실행으로</h3>
+          <div class="nums" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+            <div><b>11개</b><span>1회 실행으로 처리하는 작업</span></div>
+            <div><b>9종</b><span>매체별 수집 판단 규칙</span></div>
+          </div>
+          <ul><li>매체마다 받는 조건이 달라 단순 반복 클릭으로는 자동화 불가</li><li>Claude 스킬로 절차를 먼저 문서화하고 Claude Code로 규칙을 코드화</li><li>클릭 성공이 아니라 실제 받은 파일로 완료 판정. 시간 절감은 측정 전</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 프로젝트 5 -->
+  <section class="sec proj" id="p5" aria-labelledby="p5-t">
+    <div class="side">
+      <span class="ref">프로젝트 5 · 실무</span>
+      <h2 id="p5-t">LGE.COM 앱 캠페인 지표 이상 진단</h2>
+      <dl class="meta">
+        <div><dt>소속</dt><dd>HSAD 퍼포먼스 마케팅 인턴</dd></div>
+        <div><dt>기간</dt><dd>2026.02 – 2026.06</dd></div>
+        <div><dt>기여도</dt><dd>100%</dd></div>
+      </dl>
+      <ul class="tags"><li>지표 모니터링</li><li>소재 운영</li></ul>
+    </div>
+    <div class="main">
+      <p class="headline">리포트에서 이상을 포착하고, 매체 보고서로 내려가 원인을 특정하고, 과거 성과로 처방을 검증한 뒤 소재를 바꿨습니다.</p>
+      <figure class="viz">
+        <figcaption>진단 순서</figcaption>
+        <ol class="steps">
+          <li>앱스플라이어 데일리 리포트에서 CPC·CPI 상승 포착</li>
+          <li>구글애즈 애셋 보고서에서 기존 소재 등급 하락 확인</li>
+          <li>2월 중순인데 키워드와 이미지가 겨울 기준인 계절 미스매치로 진단</li>
+          <li>성과 히스토리에서 계절 소재의 CTR이 높다는 상관관계 확인</li>
+          <li class="me">봄 애셋과 과거 전환 우수 키워드로 문구 개편</li>
+        </ol>
+        <div class="nums">
+          <div><b>CPI −14.8%</b><span>전월 대비</span></div>
+          <div><b>CPC −13.0%</b><span>전월 대비</span></div>
+          <div><b>CPM −13.4%</b><span>전월 대비</span></div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 프로젝트 6 -->
+  <section class="sec proj" id="p6" aria-labelledby="p6-t">
+    <div class="side">
+      <span class="ref">프로젝트 6 · 개인 채널</span>
+      <h2 id="p6-t">유튜브 채널 다국어 검색 최적화</h2>
+      <dl class="meta">
+        <div><dt>채널</dt><dd>K-POP 직캠 채널</dd></div>
+        <div><dt>기간</dt><dd>2023.04 – 2026.06</dd></div>
+        <div><dt>기여도</dt><dd>100%</dd></div>
+      </dl>
+      <ul class="tags"><li>검색 노출 개선</li><li>콘텐츠 운영</li></ul>
+    </div>
+    <div class="main">
+      <p class="headline">한국어로만 쓴 제목과 설명이 해외 검색 노출을 막는다고 진단하고, 메타데이터를 일본어와 번체중국어로 다시 설계했습니다.</p>
+      <figure class="viz">
+        <figcaption>일본 유입 비중 <span class="cap-sub">채널 누적 조회수 1,315만 회</span></figcaption>
+        <div class="bars" role="img" aria-label="일본 유입 비중 10.6%에서 16.1%로">
+          <div class="bar-row"><span class="lab">현지화 전</span><div class="track"><div class="fill" style="width:53%"></div><span class="val" style="left:53%">10.6%</span></div></div>
+          <div class="bar-row"><span class="lab">현지화 후</span><div class="track"><div class="fill on" style="width:80.5%"></div><span class="val" style="left:80.5%">16.1%</span></div></div>
+        </div>
+        <div class="axis" aria-hidden="true"><span class="pad"></span><div class="ticks"><span>0%</span><span>10%</span><span>20%</span></div></div>
+      </figure>
+      <dl class="facts">
+        <div><dt>실행</dt><dd><ul><li>바이럴 영상 유입에서 일본 비중을 확인하고 일본어·번체중국어 메타데이터로 현지화</li><li>설명란에 타깃 국가 언어로 아티스트, 행사, 곡명을 조합한 롱테일 키워드 배치</li><li>Gemini API 기반 SEO 자동화 봇 제작</li></ul></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="cred" aria-labelledby="cred-t">
+    <h2 id="cred-t">자격·도구</h2>
+    <div class="cols">
+      <div>
+        <h3>자격</h3>
+        <ul><li>검색광고마케터 1급</li><li>Google Ads Search Certification</li><li>NAVER Ads Expert - SA</li><li>Google Analytics Certification</li></ul>
+      </div>
+      <div>
+        <h3>도구</h3>
+        <ul><li><span>매체</span> 네이버 검색광고, Google Ads, Meta, 카카오모먼트, AppsFlyer</li><li><span>분석</span> Google Analytics, Looker Studio, Excel</li><li><span>자동화</span> Claude Code, Gemini API, Python, Playwright</li></ul>
+      </div>
+    </div>
+    <details>
+      <summary>이 페이지에 넣은 구조화 데이터 보기</summary>
+      <pre id="ld-view" aria-label="이 페이지의 구조화 데이터"></pre>
+    </details>
+  </section>
+
+  <footer>
+    <p>수치는 사내 산출물과 본인 측정을 기준으로 적었고, 광고주 예산과 단가 같은 대외비 수치는 넣지 않았습니다.</p>
+    <p>최종 수정 <time datetime="2026-10-25">2026년 10월 25일</time></p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var src=document.querySelector('script[type="application/ld+json"]');
+  var out=document.getElementById('ld-view');
+  if(!src||!out) return;
+  try{ out.textContent=JSON.stringify(JSON.parse(src.textContent),null,2); }
+  catch(e){ out.textContent='구조화 데이터를 읽지 못했습니다: '+e.message; }
+})();
+</script>
+
+</body>
+</html>
